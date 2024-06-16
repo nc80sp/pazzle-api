@@ -12,4 +12,5 @@ class Accounts extends Model
     protected $guarded = [
         'id'
     ];
+
 }

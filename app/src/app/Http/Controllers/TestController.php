@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TestController extends Controller
 {
     public function index(){
-        $accounts = Accounts::All();
+        $accounts = Accounts::paginate(3);
         return view('test', ['accounts' => $accounts]);
     }
     public function exec(Request $request){
@@ -20,6 +20,7 @@ class TestController extends Controller
         return redirect('/complete');
     }
     public function complete(){
+
         return view('test2');
     }
 }

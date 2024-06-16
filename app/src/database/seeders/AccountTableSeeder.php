@@ -19,9 +19,11 @@ class AccountTableSeeder extends Seeder
             'name' => 'jobi',
             'password' => Hash::make('jobi')
         ]);
-        Accounts::create([
-            'name' => 'chiba',
-            'password' => Hash::make('nobu')
-        ]);
+        for ($i = 1 ; $i <= 10 ; $i++) {
+            Accounts::create([
+                'name' => 'chiba' . $i,
+                'password' => Hash::make('nobu')
+            ]);
+        }
     }
 }
